@@ -18,7 +18,7 @@ var HelloWorldScene = cc.Scene.extend(
 	{
         this._super( ) ;
 		
-		this._countdownLayer = new comp.CountdownLayer( cc.color( 255 , 255 , 255 , 0 ) ,
+		this._countdownLayer = new comp.CountdownLayer( cc.color( 255 , 255 , 255 , 1 ) ,
 														cc.director.getWinSize( ).width ,
 														cc.director.getWinSize( ).height ) ;
 		this._countdownLayer.retain( ) ;

@@ -28,7 +28,7 @@ comp.CountdownLayer = comp.TouchBlockedLayer.extend(
 		this._timeout			= time ;
 		this._timeoutCallback	= callback ;
 		
-		cc.director.getRunningScene( ).addChild( this , 10 ) ;
+		cc.director.getRunningScene( ).addChild( this , 100 ) ;
 		
 		this.schedule( this._countdown.bind( this ) ,
 					   1 ,

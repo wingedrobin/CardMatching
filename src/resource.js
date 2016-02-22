@@ -1,14 +1,6 @@
+// 2016/01/29 14:10 刪除註解
+
 var res = {
-    // harupi_png				: "res/harupi.png" ,
-    // mio_png 				: "res/mio.png" ,
-    // mako_png				: "res/mako.png" ,
-	// nana_png				: "res/nana.png" ,
-	// paru_png				: "res/paru.png" ,
-	// sakura_png				: "res/sakura.png" ,
-	// sayaka_png				: "res/sayaka.png" ,
-	// yui_png					: "res/yui.png" ,
-	// background_png			: "res/background.png" ,
-	
 	android_png				: "res/android.png" ,
     cocos2d_png 			: "res/cocos2d.png" ,
     dragonbones_png			: "res/dragonbones.png" ,
@@ -22,7 +14,11 @@ var res = {
 	leave_normal_png		: "res/leave_normal.png" ,
 	leave_selected_png		: "res/leave_selected.png" ,
 	try_again_normal_png	: "res/try_again_normal.png" ,
-	try_again_selected_png	: "res/try_again_selected.png"
+	try_again_selected_png	: "res/try_again_selected.png" ,
+	
+	correct_mp3				: "res/correct.mp3" ,
+	wrong_mp3				: "res/wrong.mp3" ,
+	clear_mp3				: "res/clear.mp3"
 };
 
 var g_resources = [];

@@ -6,11 +6,12 @@
  * @license
  */
 
+// 2016/01/29 14:00 加入音效
+// 音效來源: 小森平 http://taira-komori.jpn.org/freesoundtw.html
+ 
 "use strict" ;
 
 var comp	= gxd.comp || { } ;
-var def		= gxd.def || { } ;
-var proj	= gxd.proj || { } ;
 
 comp.WindowFrameLayer = cc.LayerColor.extend(
 /** @lends WindowFrameLayer */
@@ -214,6 +215,8 @@ comp.WindowFrameLayer = cc.LayerColor.extend(
 		{
 			if( this._lastFlipedCard.getTag( ) === card.getTag( ) )
 			{
+				cc.audioEngine.playEffect( res.correct_mp3 ) ;
+				
 				card.free( );
 				card.removeFromParent( ) ;
 				card = null ;
@@ -224,10 +227,15 @@ comp.WindowFrameLayer = cc.LayerColor.extend(
 				this._amountOfUnflippedCard -= 2 ;
 				
 				if( this._amountOfUnflippedCard === 0 )
+				{
 					this.getParent( ).gameOver( true ) ;
+					cc.audioEngine.playEffect( res.clear_mp3 ) ;
+				}
 			}
 			else
 			{
+				cc.audioEngine.playEffect( res.wrong_mp3 ) ;
+				
 				card.flip( ) ;
 				this._lastFlipedCard.flip( ) ;
 				this._lastFlipedCard = null ;
