@@ -256,7 +256,7 @@ comp.WindowFrameLayer = cc.LayerColor.extend(
 				child.flip( ) ;
 	} ,
 	
-	onExitTransitionDidFinish : function( )
+	onExitTransitionDidStart : function( )
 	{
 		this._super( ) ;
 	} ,
