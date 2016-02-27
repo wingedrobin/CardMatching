@@ -251,9 +251,11 @@ comp.WindowFrameLayer = cc.LayerColor.extend(
 	{
 		var children = this.getChildren( ) ;
 		
-		for( var child of children )
-			if( child.flip )
-				child.flip( ) ;
+		for( var i = 0 ; i < children.length ; i ++ )
+		{
+			if( children[ i ].flip )
+				children[ i ].flip( ) ;
+		}
 	} ,
 	
 	onExitTransitionDidStart : function( )
